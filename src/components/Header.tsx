@@ -54,7 +54,7 @@ export default function Header() {
           <div className="relative w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 rounded-full overflow-hidden bg-white shadow-sm ring-1 ring-slate-200/80 group-hover:ring-blue-300 transition-all flex items-center justify-center p-0.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logo.png"
+              src="/logo-128.png"
               alt="Vallabh Dental Care Clinic Logo"
               width={56}
               height={56}

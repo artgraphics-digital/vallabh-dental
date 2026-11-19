@@ -36,12 +36,12 @@ export const metadata: Metadata = {
     "Dr Medha Upadhyay Dentist Lucknow"
   ],
   alternates: {
-    canonical: "https://vallabhdentalcare.com/treatments",
+    canonical: "https://www.vallabhdental.in/treatments",
   },
   openGraph: {
     title: "Flagship Dental Treatments | Vallabh Dental Care Lucknow",
     description: "Modern, hygienic, and pain-free dental treatments in Khargapur, Gomti Nagar led by Dr. Medha Upadhyay (3+ Years Experience).",
-    url: "https://vallabhdentalcare.com/treatments",
+    url: "https://www.vallabhdental.in/treatments",
     type: "website",
   },
 };
@@ -191,15 +191,15 @@ export default function TreatmentsPage() {
     "@graph": [
       {
         "@type": "MedicalWebPage",
-        "@id": "https://vallabhdentalcare.com/treatments#webpage",
-        "url": "https://vallabhdentalcare.com/treatments",
+        "@id": "https://www.vallabhdental.in/treatments#webpage",
+        "url": "https://www.vallabhdental.in/treatments",
         "name": "Flagship Dental Treatments in Gomti Nagar, Lucknow | Vallabh Dental Care",
         "description": "Comprehensive guide to flagship dental treatments by Dr. Medha Upadhyay at Vallabh Dental Care, Khargapur, Gomti Nagar, Lucknow.",
         "isPartOf": {
           "@type": "WebSite",
-          "@id": "https://vallabhdentalcare.com/#website",
+          "@id": "https://www.vallabhdental.in/#website",
           "name": "Vallabh Dental Care",
-          "url": "https://vallabhdentalcare.com"
+          "url": "https://www.vallabhdental.in"
         },
         "about": {
           "@type": "Dentist",
@@ -223,12 +223,12 @@ export default function TreatmentsPage() {
           "position": index + 1,
           "name": treatment.title,
           "description": treatment.shortDesc,
-          "url": `https://vallabhdentalcare.com/treatments#${treatment.id}`
+          "url": `https://www.vallabhdental.in/treatments#${treatment.id}`
         }))
       },
       {
         "@type": "FAQPage",
-        "@id": "https://vallabhdentalcare.com/treatments#faq",
+        "@id": "https://www.vallabhdental.in/treatments#faq",
         "mainEntity": faqs.map((faq) => ({
           "@type": "Question",
           "name": faq.question,

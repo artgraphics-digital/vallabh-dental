@@ -8,7 +8,18 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
+  from = "/services"
+  to = "/treatments"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/*"
+  to = "/treatments"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
+  to = "/404.html"
+  status = 404

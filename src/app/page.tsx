@@ -6,8 +6,121 @@ import ClinicStatus from '@/components/ClinicStatus';
 import ReviewsSection from '@/components/ReviewsSection';
 
 export default function Home() {
+  const clinicJsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["Dentist", "DentalClinic", "LocalBusiness"],
+    "@id": "https://www.vallabhdental.in/#dentist",
+    "name": "Vallabh Dental Care",
+    "alternateName": "Vallabh Dental Clinic Gomti Nagar",
+    "url": "https://www.vallabhdental.in",
+    "logo": "https://www.vallabhdental.in/logo.png",
+    "image": [
+      "https://www.vallabhdental.in/dr-medha-v1.webp",
+      "https://www.vallabhdental.in/hero-bg.webp",
+      "https://www.vallabhdental.in/logo.png"
+    ],
+    "description": "Vallabh Dental Care is a modern, hygienic dental clinic in Sector 6, Khargapur, Gomti Nagar, Lucknow led by Dr. Medha Upadhyay. Painless single-sitting root canals, dental implants, teeth cleaning, clear aligners, and family dental care.",
+    "telephone": "+919236163027",
+    "priceRange": "₹₹",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, Credit Card, Debit Card, UPI",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "152/6, Geeta Puri, Sector 6, Khargapur",
+      "addressLocality": "Gomti Nagar, Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "226010",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.8526,
+      "longitude": 81.0118
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"],
+        "opens": "16:30",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "11:00",
+        "closes": "14:00"
+      }
+    ],
+    "employee": {
+      "@type": "Person",
+      "name": "Dr. Medha Upadhyay",
+      "jobTitle": "Chief Dental Surgeon",
+      "description": "Experienced dental surgeon specializing in painless rotary root canals, cosmetic smile designing, and preventive dentistry."
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "28",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Dental Treatments & Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Root Canal Treatment (Single-sitting RCT)"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Dental Implants"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Teeth Whitening and Scaling"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Clear Aligners and Invisible Braces"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Painless Tooth Extractions"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Pediatric & Family Dentistry"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <main className="min-h-screen">
+      {/* Local Business JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicJsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white pt-10 pb-20 lg:pt-16 lg:pb-32">
         {/* Crisp Pure White with Subtle Blue Ambient Radial Glows */}
@@ -31,9 +144,9 @@ export default function Home() {
 
               {/* Main Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
-                Gentle Dental Care <br className="hidden sm:inline" />
+                Gentle Dental Care in <br className="hidden sm:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                  You Can Truly Trust.
+                  Gomti Nagar, Lucknow
                 </span>
               </h1>
 
@@ -124,7 +237,7 @@ export default function Home() {
               <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-slate-200">
                 <Image
                   src="/dr-medha-v1.webp"
-                  alt="Dr. Medha Upadhyay"
+                  alt="Dr. Medha Upadhyay - Chief Dental Surgeon at Vallabh Dental Care Gomti Nagar Lucknow"
                   width={800}
                   height={1000}
                   className="w-full h-full object-cover"

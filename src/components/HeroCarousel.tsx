@@ -45,7 +45,13 @@ export default function HeroCarousel() {
             <div key={idx} className="relative min-w-full h-full">
               <Image
                 src={src}
-                alt={`Clinic View ${idx + 1}`}
+                alt={
+                  idx === 0
+                    ? "Vallabh Dental Care clinic entrance and sterilized operatory in Gomti Nagar"
+                    : idx === 1
+                    ? "Advanced dental examination chair and diagnostic equipment at Vallabh Dental Care"
+                    : "Modern dental treatment setup and autoclave sterilization zone at Vallabh Dental Care Lucknow"
+                }
                 width={800}
                 height={600}
                 sizes="(max-width: 1024px) 100vw, 50vw"

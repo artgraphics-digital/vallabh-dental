@@ -7,9 +7,46 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.vallabhdental.in"),
   title: "Vallabh Dental Care | Best Dentist in Gomti Nagar, Lucknow",
   description: "Vallabh Dental Care is a premium dental clinic in Sector 6, Gomti Nagar, Lucknow. We offer advanced general, cosmetic, and surgical dental treatments. Book your appointment today!",
   keywords: ["Dr. Medha Upadhyay", "Best Dentist in Gomti Nagar", "Dental Clinic in Sector 6 Gomti Nagar", "Top Dentist in Khargapur", "Dentist in Lucknow", "Vallabh Dental Care"],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://www.vallabhdental.in",
+    siteName: "Vallabh Dental Care",
+    title: "Vallabh Dental Care | Best Dentist in Gomti Nagar, Lucknow",
+    description: "Vallabh Dental Care is a premium dental clinic in Sector 6, Gomti Nagar, Lucknow led by Dr. Medha Upadhyay. Advanced, hygienic, and pain-free dental treatments.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Vallabh Dental Care Clinic Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vallabh Dental Care | Best Dentist in Gomti Nagar, Lucknow",
+    description: "Advanced, hygienic, and pain-free dental treatments in Sector 6, Gomti Nagar, Lucknow.",
+    images: ["/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/logo.png", type: "image/png" },
