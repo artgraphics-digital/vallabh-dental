@@ -104,17 +104,6 @@ export default function Home() {
               <div className="relative mx-auto max-w-lg lg:max-w-none">
                 <HeroCarousel />
 
-                {/* Floating Smile Count Card */}
-                <div className="absolute -bottom-5 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 flex items-center gap-3.5 z-20 transition-transform hover:-translate-y-0.5">
-                  <div className="w-11 h-11 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center">
-                    <Smile className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">500+</p>
-                    <p className="text-xs text-slate-500 font-medium">Happy Smiles Restored</p>
-                  </div>
-                </div>
-
                 {/* Floating Safety & Hygiene Badge */}
                 <div className="absolute -top-4 -right-3 sm:-right-4 bg-white/95 backdrop-blur-md py-2 px-3.5 rounded-xl shadow-lg border border-slate-100 hidden sm:flex items-center gap-2 z-20">
                   <Shield className="w-4 h-4 text-emerald-600" />

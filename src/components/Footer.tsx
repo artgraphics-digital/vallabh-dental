@@ -103,9 +103,16 @@ export default function Footer() {
           
           {/* Column 1: Clinic Brand & Overview (4 cols) */}
           <div className="lg:col-span-4 space-y-5">
-            <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="bg-blue-600 text-white p-2.5 rounded-xl group-hover:bg-blue-500 transition-colors shadow-md shadow-blue-900/40">
-                <Stethoscope className="w-6 h-6" />
+            <Link href="/" className="inline-flex items-center gap-3.5 group">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white shadow-md ring-1 ring-white/20 p-0.5 flex items-center justify-center shrink-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logo.png"
+                  alt="Vallabh Dental Care Clinic Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
               <div>
                 <span className="text-2xl font-bold text-white tracking-tight block leading-tight">Vallabh Dental Care</span>
