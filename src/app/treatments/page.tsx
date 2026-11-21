@@ -40,9 +40,23 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Flagship Dental Treatments | Vallabh Dental Care Lucknow",
-    description: "Modern, hygienic, and pain-free dental treatments in Khargapur, Gomti Nagar led by Dr. Medha Upadhyay (3+ Years Experience).",
+    description: "Modern, hygienic, and pain-free dental treatments in Khargapur, Gomti Nagar led by Dr. Medha Upadhyay (BDS, MDS Prosthodontics).",
     url: "https://www.vallabhdental.in/treatments",
     type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Vallabh Dental Care Clinic Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Flagship Dental Treatments | Vallabh Dental Care Lucknow",
+    description: "Modern, hygienic, and pain-free dental treatments in Khargapur, Gomti Nagar led by Dr. Medha Upadhyay (BDS, MDS Prosthodontics).",
+    images: ["/logo.png"],
   },
 };
 
@@ -202,18 +216,26 @@ export default function TreatmentsPage() {
           "url": "https://www.vallabhdental.in"
         },
         "about": {
-          "@type": "Dentist",
-          "name": "Vallabh Dental Care",
-          "telephone": "+919236163027",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "152/6, Geeta Puri, Sector 6, Khargapur",
-            "addressLocality": "Gomti Nagar, Lucknow",
-            "addressRegion": "Uttar Pradesh",
-            "postalCode": "226010",
-            "addressCountry": "IN"
-          }
+          "@id": "https://www.vallabhdental.in/#dentist"
         }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.vallabhdental.in/treatments#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.vallabhdental.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Treatments",
+            "item": "https://www.vallabhdental.in/treatments"
+          }
+        ]
       },
       {
         "@type": "ItemList",
@@ -222,7 +244,7 @@ export default function TreatmentsPage() {
           "@type": "ListItem",
           "position": index + 1,
           "name": treatment.title,
-          "description": treatment.shortDesc,
+          "description": treatment.detailedDesc,
           "url": `https://www.vallabhdental.in/treatments#${treatment.id}`
         }))
       },
@@ -371,9 +393,10 @@ export default function TreatmentsPage() {
                     Book Consultation
                   </a>
                   <a
-                    href="tel:09236163027"
+                    href="tel:+919236163027"
                     className="p-2.5 rounded-full border border-slate-200 text-slate-600 hover:text-blue-600 hover:border-blue-300 transition-colors"
                     title="Call Clinic at +91 92361 63027"
+                    aria-label="Call Clinic at +91 92361 63027"
                   >
                     <PhoneCall className="w-4 h-4" />
                   </a>
@@ -410,7 +433,7 @@ export default function TreatmentsPage() {
               <span className="text-xs font-bold uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full text-white inline-block">
                 Khargapur • Gomti Nagar
               </span>
-              <h3 className="text-2xl font-bold">Ready to consult Dr. Medha Upadhyay?</h3>
+              <h2 className="text-2xl font-bold">Ready to consult Dr. Medha Upadhyay?</h2>
               <p className="text-blue-100 text-sm">
                 Visit our clinic at 152/6, Geeta Puri, Sector 6, Khargapur, Gomti Nagar, Lucknow.
               </p>

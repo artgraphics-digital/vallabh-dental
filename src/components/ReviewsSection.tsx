@@ -90,11 +90,9 @@ const REVIEWS_DATA: Review[] = [
   },
 ];
 
-// Google Maps place review & search URLs
-const GOOGLE_MAPS_SEARCH_URL =
-  'https://www.google.com/maps/search/?api=1&query=Vallabh+Dental+Care,+Sector+6,+Gomti+Nagar,+Lucknow';
-const GOOGLE_WRITE_REVIEW_URL =
-  'https://www.google.com/maps/search/?api=1&query=Vallabh+Dental+Care,+Sector+6,+Gomti+Nagar,+Lucknow';
+// Google Maps place review & search URLs pointing directly to verified profile
+const GOOGLE_MAPS_SEARCH_URL = 'https://maps.app.goo.gl/x1gic12uMWh2KBsg9';
+const GOOGLE_WRITE_REVIEW_URL = 'https://maps.app.goo.gl/x1gic12uMWh2KBsg9';
 
 export default function ReviewsSection() {
   const [filter, setFilter] = useState<'all' | 'rct' | 'extraction' | 'cleaning'>('all');
@@ -160,7 +158,7 @@ export default function ReviewsSection() {
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm font-medium text-slate-600 mt-1">
-                  Google Business Profile Reviews
+                  16 Verified Google Reviews
                 </p>
               </div>
             </div>

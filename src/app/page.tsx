@@ -8,110 +8,154 @@ import ReviewsSection from '@/components/ReviewsSection';
 export default function Home() {
   const clinicJsonLd = {
     "@context": "https://schema.org",
-    "@type": ["Dentist", "DentalClinic", "LocalBusiness"],
-    "@id": "https://www.vallabhdental.in/#dentist",
-    "name": "Vallabh Dental Care",
-    "alternateName": "Vallabh Dental Clinic Gomti Nagar",
-    "url": "https://www.vallabhdental.in",
-    "logo": "https://www.vallabhdental.in/logo.png",
-    "image": [
-      "https://www.vallabhdental.in/dr-medha-v1.webp",
-      "https://www.vallabhdental.in/hero-bg.webp",
-      "https://www.vallabhdental.in/logo.png"
-    ],
-    "description": "Vallabh Dental Care is a modern, hygienic dental clinic in Sector 6, Khargapur, Gomti Nagar, Lucknow led by Dr. Medha Upadhyay. Painless single-sitting root canals, dental implants, teeth cleaning, clear aligners, and family dental care.",
-    "telephone": "+919236163027",
-    "priceRange": "₹₹",
-    "currenciesAccepted": "INR",
-    "paymentAccepted": "Cash, Credit Card, Debit Card, UPI",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "152/6, Geeta Puri, Sector 6, Khargapur",
-      "addressLocality": "Gomti Nagar, Lucknow",
-      "addressRegion": "Uttar Pradesh",
-      "postalCode": "226010",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 26.8526,
-      "longitude": 81.0118
-    },
-    "openingHoursSpecification": [
+    "@graph": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"],
-        "opens": "16:30",
-        "closes": "20:00"
+        "@type": "WebSite",
+        "@id": "https://www.vallabhdental.in/#website",
+        "url": "https://www.vallabhdental.in",
+        "name": "Vallabh Dental Care",
+        "description": "Premium Dental Clinic in Sector 6, Khargapur, Gomti Nagar, Lucknow led by Dr. Medha Upadhyay.",
+        "publisher": {
+          "@id": "https://www.vallabhdental.in/#dentist"
+        }
       },
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "11:00",
-        "closes": "14:00"
-      }
-    ],
-    "employee": {
-      "@type": "Person",
-      "name": "Dr. Medha Upadhyay",
-      "jobTitle": "Chief Dental Surgeon",
-      "description": "Experienced dental surgeon specializing in painless rotary root canals, cosmetic smile designing, and preventive dentistry."
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "28",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Dental Treatments & Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "Root Canal Treatment (Single-sitting RCT)"
-          }
+        "@type": ["Dentist", "DentalClinic", "LocalBusiness"],
+        "@id": "https://www.vallabhdental.in/#dentist",
+        "name": "Vallabh Dental Care",
+        "alternateName": "Vallabh Dental Clinic Gomti Nagar",
+        "url": "https://www.vallabhdental.in",
+        "logo": "https://www.vallabhdental.in/logo.png",
+        "image": [
+          "https://www.vallabhdental.in/dr-medha-v1.webp",
+          "https://www.vallabhdental.in/hero-bg.webp",
+          "https://www.vallabhdental.in/logo.png"
+        ],
+        "description": "Vallabh Dental Care is a modern, hygienic dental clinic in Sector 6, Khargapur, Gomti Nagar, Lucknow led by Dr. Medha Upadhyay (BDS, MDS Prosthodontics). Painless single-sitting root canals, dental implants, teeth cleaning, clear aligners, crowns & bridges, and family dental care.",
+        "telephone": "+919236163027",
+        "priceRange": "₹₹",
+        "currenciesAccepted": "INR",
+        "paymentAccepted": "Cash, Credit Card, Debit Card, UPI",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "152/6, Geeta Puri, Sector 6, Khargapur",
+          "addressLocality": "Gomti Nagar, Lucknow",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "226010",
+          "addressCountry": "IN"
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "Dental Implants"
-          }
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 26.8358482,
+          "longitude": 81.0217227
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "Teeth Whitening and Scaling"
+        "hasMap": "https://maps.app.goo.gl/x1gic12uMWh2KBsg9",
+        "sameAs": [
+          "https://www.google.com/maps/place/Vallabh+Dental+Care/@26.8358482,81.0217227,17z/data=!3m1!4b1!4m6!3m5!1s0x399be3608a56d679:0xd09c712f40fbcbda!8m2!3d26.8358482!4d81.0217227!16s%2Fg%2F11zbfpwv33"
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"],
+            "opens": "16:30",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "11:00",
+            "closes": "14:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "00:00",
+            "closes": "00:00"
           }
+        ],
+        "employee": {
+          "@type": ["Person", "Dentist"],
+          "name": "Dr. Medha Upadhyay",
+          "jobTitle": "Chief Dental Surgeon & Prosthodontist",
+          "medicalSpecialty": "Prosthodontics",
+          "knowsAbout": ["Prosthodontics", "Crown and Bridge", "Rotary Endodontics", "Root Canal Treatment", "Dental Implants", "Cosmetic Dentistry"],
+          "description": "Experienced Dental Surgeon and Prosthodontist (BDS, MDS Prosthodontics) specializing in painless rotary root canals, crowns, bridges, dental implants, cosmetic smile designing, and preventive dentistry."
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "Clear Aligners and Invisible Braces"
-          }
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "16",
+          "bestRating": "5",
+          "worstRating": "1"
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "Painless Tooth Extractions"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "Pediatric & Family Dentistry"
-          }
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Dental Treatments & Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalProcedure",
+                "name": "Root Canal Treatment (Single-sitting RCT)",
+                "url": "https://www.vallabhdental.in/treatments#root-canal"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalProcedure",
+                "name": "Dental Implants",
+                "url": "https://www.vallabhdental.in/treatments#dental-implants"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalProcedure",
+                "name": "Teeth Whitening and Scaling",
+                "url": "https://www.vallabhdental.in/treatments#teeth-whitening-cleaning"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalProcedure",
+                "name": "Clear Aligners and Invisible Braces",
+                "url": "https://www.vallabhdental.in/treatments#orthodontics-aligners"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalProcedure",
+                "name": "Painless Tooth Extractions",
+                "url": "https://www.vallabhdental.in/treatments#painless-extractions"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalProcedure",
+                "name": "Pediatric & Family Dentistry",
+                "url": "https://www.vallabhdental.in/treatments#kids-family-dentistry"
+              }
+            }
+          ]
         }
-      ]
-    }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.vallabhdental.in/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.vallabhdental.in"
+          }
+        ]
+      }
+    ]
   };
 
   return (
@@ -198,7 +242,7 @@ export default function Home() {
                     <div className="flex items-center gap-1">
                       <span className="font-bold text-slate-900 leading-tight">5.0 Star</span>
                     </div>
-                    <p className="text-xs text-slate-500">100% Patient Rating</p>
+                    <p className="text-xs text-slate-500">16 Patient Reviews</p>
                   </div>
                 </div>
 
@@ -259,7 +303,7 @@ export default function Home() {
                 About The Doctor
               </div>
               <h2 className="order-1 lg:order-none text-3xl lg:text-4xl font-bold text-slate-900 mb-2 lg:mb-4">Meet Dr. Medha Upadhyay</h2>
-              <h3 className="order-1 lg:order-none text-xl text-blue-600 font-medium mb-6">BDS, MDS (Specialization)</h3>
+              <p className="order-1 lg:order-none text-xl text-blue-600 font-medium mb-6">BDS, MDS (Prosthodontics)</p>
 
               <div className="order-3 lg:order-none space-y-4 text-slate-600 mb-8 leading-relaxed mt-8 lg:mt-0">
                 <p>
@@ -343,6 +387,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-green-600 transition-colors"
                   title="WhatsApp Consultation"
+                  aria-label="Consult Dr. Medha on WhatsApp regarding Root Canal Treatment"
                 >
                   <MessageCircle className="w-5 h-5" />
                 </a>
@@ -387,6 +432,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-green-600 transition-colors"
                   title="WhatsApp Consultation"
+                  aria-label="Consult Dr. Medha on WhatsApp regarding Dental Implants"
                 >
                   <MessageCircle className="w-5 h-5" />
                 </a>
@@ -431,6 +477,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-green-600 transition-colors"
                   title="WhatsApp Consultation"
+                  aria-label="Consult Dr. Medha on WhatsApp regarding Teeth Cleaning and Whitening"
                 >
                   <MessageCircle className="w-5 h-5" />
                 </a>
@@ -475,6 +522,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-green-600 transition-colors"
                   title="WhatsApp Consultation"
+                  aria-label="Consult Dr. Medha on WhatsApp regarding Clear Aligners and Braces"
                 >
                   <MessageCircle className="w-5 h-5" />
                 </a>
@@ -519,6 +567,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-green-600 transition-colors"
                   title="WhatsApp Consultation"
+                  aria-label="Consult Dr. Medha on WhatsApp regarding Tooth Extraction"
                 >
                   <MessageCircle className="w-5 h-5" />
                 </a>
@@ -563,6 +612,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-green-600 transition-colors"
                   title="WhatsApp Consultation"
+                  aria-label="Consult Dr. Medha on WhatsApp regarding Kids and Family Dental Care"
                 >
                   <MessageCircle className="w-5 h-5" />
                 </a>
@@ -685,7 +735,7 @@ export default function Home() {
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 text-lg">Address</h4>
+                      <h3 className="font-semibold text-slate-900 text-lg">Address</h3>
                       <p className="text-slate-600 mt-1">152/6, Geeta Puri, Sector 6,<br />Khargapur, Gomti Nagar,<br />Lucknow, Uttar Pradesh 226010</p>
                     </div>
                   </div>
@@ -695,7 +745,7 @@ export default function Home() {
                       <PhoneCall className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 text-lg">Call Us</h4>
+                      <h3 className="font-semibold text-slate-900 text-lg">Call Us</h3>
                       <a href="tel:+919236163027" className="text-blue-600 hover:text-blue-700 font-medium mt-1 inline-block text-lg">+91 92361 63027</a>
                       <p className="text-sm text-slate-500 mt-1">For appointments & emergencies</p>
                     </div>
@@ -706,7 +756,7 @@ export default function Home() {
                       <Calendar className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 text-lg">Hours</h4>
+                      <h3 className="font-semibold text-slate-900 text-lg">Hours</h3>
                       <p className="text-slate-600 mt-1">Mon – Thu & Sat: 4:30 PM – 8:00 PM</p>
                       <p className="text-slate-600">Sunday: 11:00 AM – 2:00 PM</p>
                       <p className="text-rose-600 font-medium">Friday: Closed</p>
@@ -715,7 +765,7 @@ export default function Home() {
                 </div>
 
                 <div className="mt-10 pt-10 border-t border-slate-100">
-                  <a href="https://www.google.com/maps/search/?api=1&query=Vallabh+Dental+Care,+Sector+6,+Gomti+Nagar,+Lucknow" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-base font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-xl transition-colors">
+                  <a href="https://maps.app.goo.gl/x1gic12uMWh2KBsg9" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-base font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-xl transition-colors">
                     <MapPin className="w-5 h-5" />
                     Get Directions on Maps
                   </a>

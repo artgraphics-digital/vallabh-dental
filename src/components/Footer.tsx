@@ -126,7 +126,7 @@ export default function Footer() {
 
             <div className="pt-2 space-y-3">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Vallabh+Dental+Care,+152/6,+Geeta+Puri,+Sector+6,+Khargapur,+Gomti+Nagar,+Lucknow,+Uttar+Pradesh+226010"
+                href="https://maps.app.goo.gl/x1gic12uMWh2KBsg9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 text-sm text-slate-300 hover:text-white transition-colors group"
@@ -141,7 +141,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="tel:09236163027"
+                href="tel:+919236163027"
                 className="flex items-center gap-3 text-sm text-slate-300 hover:text-white transition-colors group"
               >
                 <Phone className="w-5 h-5 text-blue-400 shrink-0 group-hover:text-blue-300 transition-colors" />
@@ -265,7 +265,7 @@ export default function Footer() {
             <span>•</span>
             <Link href="/#contact" className="hover:text-blue-400 transition-colors">Directions</Link>
             <span>•</span>
-            <a href="tel:09236163027" className="hover:text-blue-400 transition-colors">Emergency Support</a>
+            <a href="tel:+919236163027" className="hover:text-blue-400 transition-colors">Emergency Support</a>
           </div>
         </div>
       </div>
